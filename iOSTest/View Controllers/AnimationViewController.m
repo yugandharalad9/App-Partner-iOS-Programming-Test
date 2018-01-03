@@ -34,6 +34,7 @@
     [super viewDidLoad];
     
     self.title = @"Animation";
+    
 }
 
 - (IBAction)backAction:(id)sender
