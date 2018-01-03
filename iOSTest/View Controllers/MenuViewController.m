@@ -51,20 +51,25 @@
 
 
 - (IBAction)didPressChatButton:(id)sender
+
+
 {
     ChatViewController *chatViewController = [[ChatViewController alloc] init];
+    self.title = Nil;
     [self.navigationController pushViewController:chatViewController animated:YES];
 }
 
 - (IBAction)didPressLoginButton:(id)sender
 {
     LoginViewController *loginViewController = [[LoginViewController alloc] init];
+    self.title = Nil;
     [self.navigationController pushViewController:loginViewController animated:YES];
 }
 
 - (IBAction)didPressAnimationButton:(id)sender
 {
     AnimationViewController *animationViewController = [[AnimationViewController alloc] init];
+    self.title = Nil;
     [self.navigationController pushViewController:animationViewController animated:YES];
 }
 

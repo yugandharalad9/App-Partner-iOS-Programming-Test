@@ -14,7 +14,6 @@
 
     @property (strong, nonatomic) IBOutlet UIImageView *logoImage;
 
-
 @end
 
 @implementation AnimationViewController
@@ -49,19 +48,27 @@
 - (IBAction)backAction:(id)sender
 {
     MenuViewController *mainMenuViewController = [[MenuViewController alloc] init];
+    mainMenuViewController.title = @"Coding Tasks";
     [self.navigationController pushViewController:mainMenuViewController animated:YES];
+    
 }
 
 
+
+// Mark: - Spinning the Logo when Spin button pressed
 
 - (IBAction)didPressSpinButton:(id)sender
 {
     CABasicAnimation *fullRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     fullRotation.fromValue = [NSNumber numberWithFloat:0.0f];
     fullRotation.toValue = [NSNumber numberWithFloat: ((360*M_PI)/180)];
-    fullRotation.duration = 10.0f;
+    fullRotation.duration = 2.0f;
     fullRotation.repeatCount = INFINITY;
-    [_spinButton.layer addAnimation:fullRotation forKey:@"360"];
+    [_logoImage.layer addAnimation:fullRotation forKey:@"360"];
+    
 }
+
+
+
 @end
 
