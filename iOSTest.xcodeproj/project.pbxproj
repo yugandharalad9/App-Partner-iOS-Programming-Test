@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		985E42A71FFCA7310001E75F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985E42A61FFCA7310001E75F /* QuartzCore.framework */; };
+		985E42A91FFCA75C0001E75F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985E42A81FFCA75C0001E75F /* AVFoundation.framework */; };
 		F21312DA1E0481F80029E33F /* ChatClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F21312D71E0481F80029E33F /* ChatClient.m */; };
 		F21312DB1E0481F80029E33F /* LoginClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F21312D91E0481F80029E33F /* LoginClient.m */; };
 		F21312E01E0485B50029E33F /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21312DE1E0485B50029E33F /* AnimationViewController.m */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		985E42A61FFCA7310001E75F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		985E42A81FFCA75C0001E75F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F21312D61E0481F80029E33F /* ChatClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatClient.h; path = Clients/ChatClient.h; sourceTree = "<group>"; };
 		F21312D71E0481F80029E33F /* ChatClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatClient.m; path = Clients/ChatClient.m; sourceTree = "<group>"; };
 		F21312D81E0481F80029E33F /* LoginClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginClient.h; path = Clients/LoginClient.h; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				985E42A91FFCA75C0001E75F /* AVFoundation.framework in Frameworks */,
+				985E42A71FFCA7310001E75F /* QuartzCore.framework in Frameworks */,
 				F273B8341D95C3000069037F /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +170,8 @@
 		F273B8321D95C3000069037F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				985E42A81FFCA75C0001E75F /* AVFoundation.framework */,
+				985E42A61FFCA7310001E75F /* QuartzCore.framework */,
 				F273B8331D95C3000069037F /* ImageIO.framework */,
 			);
 			name = Frameworks;
@@ -220,6 +228,7 @@
 				F264BD951D7F4F0400275D46 /* Sources */,
 				F264BD961D7F4F0400275D46 /* Frameworks */,
 				F264BD971D7F4F0400275D46 /* Resources */,
+				985E42A51FFCA6FA0001E75F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -278,6 +287,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		985E42A51FFCA6FA0001E75F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F264BD951D7F4F0400275D46 /* Sources */ = {

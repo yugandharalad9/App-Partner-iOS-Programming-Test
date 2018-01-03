@@ -10,9 +10,15 @@
 #import "MenuViewController.h"
 
 @interface AnimationViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *spinButton;
+
+    @property (strong, nonatomic) IBOutlet UIImageView *logoImage;
+
+
 @end
 
 @implementation AnimationViewController
+
 
 /**
  * =========================================================================================
@@ -37,13 +43,25 @@
     
 }
 
+
+
+
 - (IBAction)backAction:(id)sender
 {
     MenuViewController *mainMenuViewController = [[MenuViewController alloc] init];
     [self.navigationController pushViewController:mainMenuViewController animated:YES];
 }
 
+
+
 - (IBAction)didPressSpinButton:(id)sender
 {
+    CABasicAnimation *fullRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    fullRotation.fromValue = [NSNumber numberWithFloat:0.0f];
+    fullRotation.toValue = [NSNumber numberWithFloat: ((360*M_PI)/180)];
+    fullRotation.duration = 10.0f;
+    fullRotation.repeatCount = INFINITY;
+    [_spinButton.layer addAnimation:fullRotation forKey:@"360"];
 }
 @end
+

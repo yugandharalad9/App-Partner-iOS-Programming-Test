@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationViewController">
             <connections>
+                <outlet property="logoImage" destination="5DT-RY-uzd" id="Wfw-BK-JuJ"/>
+                <outlet property="spinButton" destination="R4X-eb-ZnV" id="YBz-rl-Suy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,7 +42,7 @@
                         <constraint firstAttribute="width" constant="169" id="dR5-ue-xO6"/>
                         <constraint firstAttribute="height" constant="30" id="vSI-kL-8Fv"/>
                     </constraints>
-                    <state key="normal" title="Spin" image="Rectangle 1"/>
+                    <state key="normal" title="Spin" backgroundImage="Rectangle 1"/>
                     <connections>
                         <action selector="didPressSpinButton:" destination="-1" eventType="touchUpInside" id="3dt-QU-jHh"/>
                     </connections>
