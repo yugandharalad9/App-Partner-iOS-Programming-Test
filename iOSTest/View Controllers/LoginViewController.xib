@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,42 +20,77 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-Sh-ZA6" userLabel="UITextField">
-                    <rect key="frame" x="56" y="100" width="263" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-Sh-ZA6" userLabel="UITextField">
+                    <rect key="frame" x="56" y="100" width="281" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="fJ1-Tn-1NM"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Yh-GL-2qX" userLabel="UITextField">
-                    <rect key="frame" x="56" y="150" width="263" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu5-GL-dZR">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lu5-GL-dZR">
                     <rect key="frame" x="16" y="20" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="I2C-oe-dFx"/>
+                    </constraints>
                     <state key="normal" title="Back"/>
                     <connections>
                         <action selector="backAction:" destination="-1" eventType="touchUpInside" id="Ppi-TZ-xyb"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-sf-pf9">
-                    <rect key="frame" x="107" y="307" width="161" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Login"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-sf-pf9">
+                    <rect key="frame" x="56" y="252" width="281" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="161" id="PXO-H1-9ER"/>
+                        <constraint firstAttribute="height" constant="48" id="r0r-g7-cPY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Log In" backgroundImage="Rectangle Orange">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
                     <connections>
                         <action selector="didPressLoginButton:" destination="-1" eventType="touchUpInside" id="QKq-3O-zJm"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Yh-GL-2qX" userLabel="UITextField">
+                    <rect key="frame" x="56" y="164" width="281" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="HTl-9K-Xrg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_login" translatesAutoresizingMaskIntoConstraints="NO" id="H8r-rT-pDN">
+                    <rect key="frame" x="0.0" y="348" width="393" height="319"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9Yh-GL-2qX" secondAttribute="trailing" constant="56" id="3E2-Ke-LaL"/>
+                <constraint firstItem="xoa-Sh-ZA6" firstAttribute="centerX" secondItem="dNN-sf-pf9" secondAttribute="centerX" id="CZZ-Lx-Rwf"/>
+                <constraint firstItem="xoa-Sh-ZA6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="EzF-8w-Xsc" userLabel="UITextField.top = top + 112"/>
+                <constraint firstItem="9Yh-GL-2qX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GP0-ee-VhN"/>
+                <constraint firstAttribute="trailing" secondItem="dNN-sf-pf9" secondAttribute="trailing" constant="56" id="Heb-Vb-cJY"/>
+                <constraint firstItem="dNN-sf-pf9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="56" id="LWm-M7-FXI"/>
+                <constraint firstItem="H8r-rT-pDN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MtT-0h-vh7"/>
+                <constraint firstItem="dNN-sf-pf9" firstAttribute="top" secondItem="9Yh-GL-2qX" secondAttribute="bottom" constant="40" id="OOI-9j-NkE" userLabel="Login.top = UITextField.bottom + 40"/>
+                <constraint firstAttribute="trailing" secondItem="H8r-rT-pDN" secondAttribute="trailing" id="Wlz-yz-E2e"/>
+                <constraint firstItem="Lu5-GL-dZR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="XG1-Le-kG4"/>
+                <constraint firstItem="xoa-Sh-ZA6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zpz-SQ-V3r"/>
+                <constraint firstAttribute="bottom" secondItem="H8r-rT-pDN" secondAttribute="bottom" id="avf-3R-0kN"/>
+                <constraint firstItem="xoa-Sh-ZA6" firstAttribute="top" secondItem="Lu5-GL-dZR" secondAttribute="bottom" constant="50" id="ee8-N7-rvO"/>
+                <constraint firstItem="H8r-rT-pDN" firstAttribute="top" secondItem="dNN-sf-pf9" secondAttribute="bottom" constant="48" id="g0Y-Bz-7co" userLabel="Image View.top = Log In.bottom + 48"/>
+                <constraint firstAttribute="trailing" secondItem="xoa-Sh-ZA6" secondAttribute="trailing" constant="56" id="maS-Aa-jDX"/>
+                <constraint firstItem="9Yh-GL-2qX" firstAttribute="top" secondItem="xoa-Sh-ZA6" secondAttribute="bottom" constant="16" id="upW-bT-WOs" userLabel="UITextField.top = UITextField.bottom + 16"/>
+                <constraint firstItem="xoa-Sh-ZA6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="56" id="yTC-O8-ADF"/>
+                <constraint firstItem="9Yh-GL-2qX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="56" id="z82-jD-RJs"/>
+            </constraints>
             <point key="canvasLocation" x="380.5" y="467.5"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
+    <resources>
+        <image name="Rectangle Orange" width="281" height="56"/>
+        <image name="img_login" width="375" height="297"/>
+    </resources>
 </document>
