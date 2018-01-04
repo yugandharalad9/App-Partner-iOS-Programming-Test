@@ -12,6 +12,11 @@
 
 @interface LoginViewController ()
 @property (nonatomic, strong) LoginClient *client;
+@property (weak, nonatomic) IBOutlet UITextField *email;
+@property (weak, nonatomic) IBOutlet UITextField *password;
+
+
+
 @end
 
 @implementation LoginViewController
@@ -42,6 +47,7 @@
 **/
 
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -62,6 +68,92 @@
 
 - (IBAction)didPressLoginButton:(id)sender
 {
+    //Mark: - Log In request sucessful
+    {
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"LogIn"
+                                     message:@"Log In Successful!!"
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        //Add Buttons
+        
+        UIAlertAction* continueButton = [UIAlertAction
+                                    actionWithTitle:@"Continue"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action) {
+                                    }];
+        
+        UIAlertAction* cancelButton = [UIAlertAction
+                                   actionWithTitle:@"Cancel"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction * action) {
+                                   }];
+        
+        //Add your buttons to alert controller
+        
+        [alert addAction:continueButton];
+        [alert addAction:cancelButton];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    
+    //Mark: - Log In request failed
+    
+    
+    
+   /* {
+        UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"LogIn"
+                                 message:@"Log In UnSuccessful"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    //Add Buttons
+    
+        UIAlertAction* TryAgainButton = [UIAlertAction
+                                     actionWithTitle:@"Try-Again"
+                                     style:UIAlertActionStyleDefault
+                                     handler:^(UIAlertAction * action) {
+                                     }];
+        [alert addAction:TryAgainButton];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    } */
+    
 }
 
+
+
+
+- (IBAction)loginButton:(id)sender {
+    
+  /*  @try {
+        
+        if ([[_email text] isEqualToString:@""] || [[_password text] isEqualToString:@""]) {
+            [self alertFailed:@"Please enter correct username and password" :@"Login Failed!"];
+            
+        } else { */
+
+    NSString *post = [[NSString alloc] initWithFormat:@"username=%@&password=%@", [_email text], [_password text]];
+    NSLog(@"PostData: %@", post);
+    NSURL *url = [NSURL URLWithString:@"http://dev3.apppartner.com/AppPartnerDeveloperTest/scripts/login.php"];
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:url];
+    [request setHTTPMethod:@"Post"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/x-www-form-urlencoder"  forHTTPHeaderField:@"Content-Type"];
+    
+    //Mark: - NSURLRequest
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *response = nil;
+    
+    NSDate *startTime = [NSDate date];
+    
+    
+    
+    
+    
+}
 @end

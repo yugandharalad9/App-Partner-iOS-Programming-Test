@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="email" destination="xoa-Sh-ZA6" id="wZU-Ol-fkf"/>
+                <outlet property="password" destination="9Yh-GL-2qX" id="KLW-E3-Ugo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
