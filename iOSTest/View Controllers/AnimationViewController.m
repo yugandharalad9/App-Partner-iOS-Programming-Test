@@ -8,12 +8,13 @@
 
 #import "AnimationViewController.h"
 #import "MenuViewController.h"
+#import "iOSTest-Swift.h"
 
 @interface AnimationViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *spinButton;
 
     @property (strong, nonatomic) IBOutlet UIImageView *logoImage;
-
+@property (strong, nonatomic) Move_and_Animation *animation;
 @end
 
 @implementation AnimationViewController
@@ -40,6 +41,25 @@
     
     self.title = @"Animation";
     
+    
+    UIView *draggableView = _logoImage;
+    draggableView.userInteractionEnabled = YES;
+    [self.view addSubview:draggableView];
+    
+    UIPanGestureRecognizer *panner = [[UIPanGestureRecognizer alloc]
+                                      initWithTarget:self action:@selector(panWasRecognized:)];
+    [draggableView addGestureRecognizer:panner];
+}
+
+- (void)panWasRecognized:(UIPanGestureRecognizer *)panner {
+    UIView *draggedView = panner.view;
+    CGPoint offset = [panner translationInView:draggedView.superview];
+    CGPoint center = draggedView.center;
+    draggedView.center = CGPointMake(center.x + offset.x, center.y + offset.y);
+    
+    // Reset translation to zero so on the next `panWasRecognized:` message, the
+    // translation will just be the additional movement of the touch since now.
+    [panner setTranslation:CGPointZero inView:draggedView.superview];
 }
 
 

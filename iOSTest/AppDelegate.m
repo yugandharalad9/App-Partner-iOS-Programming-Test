@@ -29,7 +29,7 @@
     self.window.rootViewController = self.navController;
     
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor yellowColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0 green:174 blue:188 alpha:1 ]];
 
     return YES;
 }

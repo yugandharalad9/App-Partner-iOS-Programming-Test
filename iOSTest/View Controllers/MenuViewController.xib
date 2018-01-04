@@ -25,8 +25,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_home_menu" translatesAutoresizingMaskIntoConstraints="NO" id="oZn-o5-NAX">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-5D-jYS" userLabel="UIButton" customClass="RoundedButton">
-                    <rect key="frame" x="56" y="100" width="263" height="56"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-5D-jYS" userLabel="UIButton" customClass="RoundedButton">
+                    <rect key="frame" x="56" y="208" width="263" height="56"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="EWp-b2-2kZ"/>
                     </constraints>
@@ -39,7 +39,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JX-Lv-AOm" userLabel="UIButton" customClass="RoundedButton">
-                    <rect key="frame" x="56" y="175" width="263" height="62"/>
+                    <rect key="frame" x="56" y="283" width="263" height="62"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="Login" backgroundImage="Login">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,7 +49,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uL-ib-Ayk" userLabel="UIButton" customClass="RoundedButton">
-                    <rect key="frame" x="56" y="250" width="263" height="56"/>
+                    <rect key="frame" x="56" y="358" width="263" height="56"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="FC4-Gr-4GJ"/>
                     </constraints>
@@ -66,7 +66,6 @@
             <constraints>
                 <constraint firstItem="6JX-Lv-AOm" firstAttribute="top" secondItem="4Fa-5D-jYS" secondAttribute="bottom" constant="19" id="6qX-Db-AZ4" userLabel="UIButton.top = UIButton.bottom + 24"/>
                 <constraint firstAttribute="trailing" secondItem="9uL-ib-Ayk" secondAttribute="trailing" constant="56" id="Ag4-jb-ULR"/>
-                <constraint firstAttribute="bottom" secondItem="9uL-ib-Ayk" secondAttribute="bottom" constant="361" id="AtD-al-VaW" userLabel="bottom = UIButton.bottom + 240"/>
                 <constraint firstAttribute="bottom" secondItem="oZn-o5-NAX" secondAttribute="bottom" id="E6J-22-krR"/>
                 <constraint firstAttribute="trailing" secondItem="6JX-Lv-AOm" secondAttribute="trailing" constant="56" id="PTQ-KK-xZe"/>
                 <constraint firstAttribute="trailing" secondItem="oZn-o5-NAX" secondAttribute="trailing" id="SRf-36-VoR"/>
@@ -78,6 +77,7 @@
                 <constraint firstItem="9uL-ib-Ayk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="56" id="q3m-OA-0An"/>
                 <constraint firstItem="6JX-Lv-AOm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="56" id="qyM-tx-n55"/>
                 <constraint firstAttribute="trailing" secondItem="4Fa-5D-jYS" secondAttribute="trailing" constant="56" id="rBw-k1-ZK8"/>
+                <constraint firstItem="4Fa-5D-jYS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="208" id="x79-7u-TvH" userLabel="UIButton.top = top + 208"/>
             </constraints>
             <point key="canvasLocation" x="380.5" y="467.5"/>
         </view>

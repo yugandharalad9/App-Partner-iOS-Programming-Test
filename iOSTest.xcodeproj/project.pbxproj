@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F7DC0FB1FFE4DBD00807A3B /* Move and Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7DC0FA1FFE4DBD00807A3B /* Move and Animation.swift */; };
 		985E42A71FFCA7310001E75F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985E42A61FFCA7310001E75F /* QuartzCore.framework */; };
 		985E42A91FFCA75C0001E75F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985E42A81FFCA75C0001E75F /* AVFoundation.framework */; };
 		F21312DA1E0481F80029E33F /* ChatClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F21312D71E0481F80029E33F /* ChatClient.m */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F7DC0F91FFE4DBD00807A3B /* iOSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		8F7DC0FA1FFE4DBD00807A3B /* Move and Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Move and Animation.swift"; sourceTree = "<group>"; };
 		985E42A61FFCA7310001E75F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		985E42A81FFCA75C0001E75F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F21312D61E0481F80029E33F /* ChatClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatClient.h; path = Clients/ChatClient.h; sourceTree = "<group>"; };
@@ -82,7 +85,9 @@
 			children = (
 				F21312DD1E0485B50029E33F /* AnimationViewController.h */,
 				F21312DE1E0485B50029E33F /* AnimationViewController.m */,
+				8F7DC0FA1FFE4DBD00807A3B /* Move and Animation.swift */,
 				F21312DF1E0485B50029E33F /* AnimationViewController.xib */,
+				8F7DC0F91FFE4DBD00807A3B /* iOSTest-Bridging-Header.h */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				TargetAttributes = {
 					F264BD981D7F4F0400275D46 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0920;
 					};
 				};
 			};
@@ -319,6 +325,7 @@
 				F21312E01E0485B50029E33F /* AnimationViewController.m in Sources */,
 				F264BD9E1D7F4F0400275D46 /* main.m in Sources */,
 				F264BDD11D7F641200275D46 /* ChatViewController.m in Sources */,
+				8F7DC0FB1FFE4DBD00807A3B /* Move and Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +435,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = iOSTest/Info.plist;
@@ -435,6 +443,9 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apppartner.iOSTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSTest/iOSTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -444,6 +455,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = iOSTest/Info.plist;
@@ -451,6 +463,8 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.apppartner.iOSTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSTest/iOSTest-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;

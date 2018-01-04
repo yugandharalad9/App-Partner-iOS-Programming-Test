@@ -52,6 +52,8 @@
 {
     [super viewDidLoad];
     self.title = @"Login";
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"hehe" style:UIBarButtonItemStylePlain target:nil action:nil];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,6 +99,26 @@
         [self presentViewController:alert animated:YES completion:nil];
     }
     
+    
+    [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:@"http://dev3.apppartner.com/AppPartnerDeveloperTest/scripts/login.php"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSLog(@"response %@", response);
+        NSLog(@"data %@", data);
+        
+        //NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        //NSLog(@"%@", str);
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+        
+        NSLog(@"%@", dict);
+        
+        
+        
+        
+        
+    }
+      ] resume
+     ];
     //Mark: - Log In request failed
     
     
@@ -133,7 +155,8 @@
             
         } else { */
 
-    NSString *post = [[NSString alloc] initWithFormat:@"username=%@&password=%@", [_email text], [_password text]];
+   
+    /* NSString *post = [[NSString alloc] initWithFormat:@"username=%@&password=%@", [_email text], [_password text]];
     NSLog(@"PostData: %@", post);
     NSURL *url = [NSURL URLWithString:@"http://dev3.apppartner.com/AppPartnerDeveloperTest/scripts/login.php"];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
@@ -149,7 +172,9 @@
     NSError *error = [[NSError alloc] init];
     NSHTTPURLResponse *response = nil;
     
-    NSDate *startTime = [NSDate date];
+    NSDate *startTime = [NSDate date]; */
+    
+    
     
     
     
