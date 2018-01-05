@@ -13,6 +13,7 @@
 @property (nonatomic, strong) Message *message;
 @property (weak, nonatomic) IBOutlet UILabel *header;
 @property (weak, nonatomic) IBOutlet UILabel *body;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
 
 @end
 
@@ -37,6 +38,11 @@
 {
     [self.header setText:message.username];
     [self.body setText:message.text];
+    
+    self.imageView.image = [UIImage imageNamed:@"imageURL.png"];
 }
+
+
+
 
 @end

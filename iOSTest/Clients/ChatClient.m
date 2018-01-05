@@ -10,6 +10,7 @@
 
 @interface ChatClient ()
 @property (nonatomic, strong) NSURLSession *session;
+
 @end
 
 @implementation ChatClient

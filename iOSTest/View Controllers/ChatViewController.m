@@ -36,7 +36,20 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
+    [self fetchData];
+    
+    NSError *error = nil;
+    _filePAth = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"json"]
+    
+    
+    
+    
+    
+    
+    
+    
     self.messages = [[NSMutableArray alloc] init];
     [self configureTable:self.chatTable];
     self.title = @"Chat";
@@ -99,5 +112,52 @@
     MenuViewController *mainMenuViewController = [[MenuViewController alloc] init];
     [self.navigationController pushViewController:mainMenuViewController animated:YES];
 }
+
+
+- (void)fetchData {
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:@"http://dev3.apppartner.com/AppPartnerDeveloperTest/scripts/chat_log.php"]];
+    [request setHTTPMethod:@"GET"];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                            completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                      NSLog(@"response %@", response);
+                                      NSLog(@"data %@", data);
+                                      
+                                      
+                                      if (data == nil) {
+                                          [self printCannotLoad];
+                                      } else {
+                                          [self parseWeatherJSON:data];
+                                      }
+                                  }];
+    [task resume];
+    
+    
+    
+}
+
+- (void) printCannotLoad {
+    NSLog(@"Here2");
+    
+}
+
+- (void) parseWeatherJSON:(NSData *) jsonData {
+    NSLog(@"Here");
+    
+    
+    dispatch_async(dispatch_get_main_queue(),^{
+        NSString *str = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"%@", str);
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:nil];
+        
+        NSLog(@"%@", dict);
+    });
+}
+
+
 
 @end
