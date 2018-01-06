@@ -43,6 +43,7 @@
     //NSURL *url = [message.avatarURL];
     NSData *data = [NSData dataWithContentsOfURL:message.avatarURL];
     self.imageView.image = [UIImage imageWithData:data];
+    
 }
 
 

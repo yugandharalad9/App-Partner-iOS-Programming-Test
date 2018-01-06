@@ -88,6 +88,7 @@
         cell = (ChatTableViewCell *)[nib objectAtIndex:0];
     }
     [cell setCellData:self.messages[indexPath.row]];
+    cell.imageView.frame = CGRectMake(0, 0, 5, 5);
     return cell;
 }
 
