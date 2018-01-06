@@ -15,6 +15,9 @@
 
     @property (strong, nonatomic) IBOutlet UIImageView *logoImage;
 @property (strong, nonatomic) Move_and_Animation *animation;
+@property (strong, nonatomic) YugandharaAnimationViewController *myAnimation;
+
+
 @end
 
 @implementation AnimationViewController
@@ -50,6 +53,19 @@
                                       initWithTarget:self action:@selector(panWasRecognized:)];
     [draggableView addGestureRecognizer:panner];
 }
+
+//Mark: - Clicking Animation Button
+- (IBAction)animationButtonClicked:(id)sender {
+    
+    _myAnimation = [[YugandharaAnimationViewController alloc] init];
+    [self presentViewController:_myAnimation animated:YES completion:nil];
+    
+    
+}
+
+
+
+
 
 - (void)panWasRecognized:(UIPanGestureRecognizer *)panner {
     UIView *draggedView = panner.view;

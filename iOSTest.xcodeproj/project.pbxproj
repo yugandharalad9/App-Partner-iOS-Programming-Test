@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8F7DC0FB1FFE4DBD00807A3B /* Move and Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7DC0FA1FFE4DBD00807A3B /* Move and Animation.swift */; };
+		8F7DC1022000342000807A3B /* YugandharaAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7DC1002000342000807A3B /* YugandharaAnimationViewController.swift */; };
+		8F7DC1032000342000807A3B /* YugandharaAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7DC1012000342000807A3B /* YugandharaAnimationViewController.xib */; };
 		985E42A71FFCA7310001E75F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985E42A61FFCA7310001E75F /* QuartzCore.framework */; };
 		985E42A91FFCA75C0001E75F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985E42A81FFCA75C0001E75F /* AVFoundation.framework */; };
 		F21312DA1E0481F80029E33F /* ChatClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F21312D71E0481F80029E33F /* ChatClient.m */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		8F7DC0F91FFE4DBD00807A3B /* iOSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		8F7DC0FA1FFE4DBD00807A3B /* Move and Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Move and Animation.swift"; sourceTree = "<group>"; };
+		8F7DC1002000342000807A3B /* YugandharaAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugandharaAnimationViewController.swift; sourceTree = "<group>"; };
+		8F7DC1012000342000807A3B /* YugandharaAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YugandharaAnimationViewController.xib; sourceTree = "<group>"; };
 		985E42A61FFCA7310001E75F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		985E42A81FFCA75C0001E75F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F21312D61E0481F80029E33F /* ChatClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatClient.h; path = Clients/ChatClient.h; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 			children = (
 				F21312DD1E0485B50029E33F /* AnimationViewController.h */,
 				F21312DE1E0485B50029E33F /* AnimationViewController.m */,
+				8F7DC1002000342000807A3B /* YugandharaAnimationViewController.swift */,
+				8F7DC1012000342000807A3B /* YugandharaAnimationViewController.xib */,
 				8F7DC0FA1FFE4DBD00807A3B /* Move and Animation.swift */,
 				F21312DF1E0485B50029E33F /* AnimationViewController.xib */,
 				8F7DC0F91FFE4DBD00807A3B /* iOSTest-Bridging-Header.h */,
@@ -283,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F264BDD71D7F642200275D46 /* LoginViewController.xib in Resources */,
+				8F7DC1032000342000807A3B /* YugandharaAnimationViewController.xib in Resources */,
 				F273B6331D95B1D50069037F /* ChatTableViewCell.xib in Resources */,
 				F264BDBE1D7F52E500275D46 /* LaunchScreen.xib in Resources */,
 				F264BDB71D7F503300275D46 /* MenuViewController.xib in Resources */,
@@ -324,6 +331,7 @@
 				F21312DB1E0481F80029E33F /* LoginClient.m in Sources */,
 				F21312E01E0485B50029E33F /* AnimationViewController.m in Sources */,
 				F264BD9E1D7F4F0400275D46 /* main.m in Sources */,
+				8F7DC1022000342000807A3B /* YugandharaAnimationViewController.swift in Sources */,
 				F264BDD11D7F641200275D46 /* ChatViewController.m in Sources */,
 				8F7DC0FB1FFE4DBD00807A3B /* Move and Animation.swift in Sources */,
 			);

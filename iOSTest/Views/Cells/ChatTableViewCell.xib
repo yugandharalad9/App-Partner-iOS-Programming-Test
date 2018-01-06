@@ -32,7 +32,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="wB8-0a-Mop">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wB8-0a-Mop">
                         <rect key="frame" x="0.0" y="0.0" width="52" height="59"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
@@ -46,7 +46,4 @@
             <point key="canvasLocation" x="35" y="61.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="ic_logo" width="140" height="132"/>
-    </resources>
 </document>

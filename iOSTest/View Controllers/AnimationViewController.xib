@@ -43,12 +43,21 @@
                         <action selector="didPressSpinButton:" destination="-1" eventType="touchUpInside" id="3dt-QU-jHh"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eT-nk-2Ds" userLabel="Animation Button">
+                    <rect key="frame" x="249" y="591" width="110" height="56"/>
+                    <state key="normal" title="Animation" backgroundImage="Rectangle Orange"/>
+                    <connections>
+                        <action selector="animationButtonClicked:" destination="-1" eventType="touchUpInside" id="9cf-4z-kMu"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="5DT-RY-uzd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="5tK-oO-KP2"/>
                 <constraint firstAttribute="bottom" secondItem="R4X-eb-ZnV" secondAttribute="bottom" constant="152" id="BPY-7Z-yYO"/>
+                <constraint firstAttribute="trailing" secondItem="2eT-nk-2Ds" secondAttribute="trailing" constant="16" id="FJB-61-Hyg"/>
+                <constraint firstAttribute="bottom" secondItem="2eT-nk-2Ds" secondAttribute="bottom" constant="20" id="SXI-7q-3fB"/>
                 <constraint firstItem="5DT-RY-uzd" firstAttribute="centerX" secondItem="R4X-eb-ZnV" secondAttribute="centerX" id="sBD-NJ-YEu"/>
                 <constraint firstItem="5DT-RY-uzd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sp8-Dg-wLK"/>
             </constraints>
@@ -58,6 +67,7 @@
     </objects>
     <resources>
         <image name="Rectangle 1" width="281" height="56"/>
+        <image name="Rectangle Orange" width="281" height="56"/>
         <image name="ic_logo" width="140" height="132"/>
     </resources>
 </document>

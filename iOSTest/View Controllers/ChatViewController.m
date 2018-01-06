@@ -40,8 +40,8 @@
     [super viewDidLoad];
     [self fetchData];
     
-    NSError *error = nil;
-    _filePAth = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"json"]
+    
+    
     
     
     
@@ -56,7 +56,7 @@
     
     
     // TODO: Remove test data when we have actual data from the server loaded
-    [self.messages addObject:[[Message alloc] initWithTestName:@"James" withTestMessage:@"Hey Guys!"]];
+    /*[self.messages addObject:[[Message alloc] initWithTestName:@"James" withTestMessage:@"Hey Guys!"]];
     [self.messages addObject:[[Message alloc] initWithTestName:@"Paul" withTestMessage:@"What's up?"]];
     [self.messages addObject:[[Message alloc] initWithTestName:@"Amy" withTestMessage:@"Hey! :)"]];
     [self.messages addObject:[[Message alloc] initWithTestName:@"James" withTestMessage:@"Want to grab some food later?"]];
@@ -65,7 +65,7 @@
     [self.messages addObject:[[Message alloc] initWithTestName:@"James" withTestMessage:@"1 hr at the Local Burger sound good?"]];
     [self.messages addObject:[[Message alloc] initWithTestName:@"Paul" withTestMessage:@"Sure thing"]];
     [self.messages addObject:[[Message alloc] initWithTestName:@"Amy" withTestMessage:@"See you there :P"]];
-    [self.chatTable reloadData];
+    [self.chatTable reloadData];*/
 }
 
 - (void)configureTable:(UITableView *)tableView
@@ -150,11 +150,41 @@
     
     dispatch_async(dispatch_get_main_queue(),^{
         NSString *str = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", str);
+       // NSLog(@"str: %@", str);
         
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:nil];
         
-        NSLog(@"%@", dict);
+       // NSLog(@"dict: %@", dict);
+        
+        //NSLog(@"dict data %@", dict[@"data"]);
+        NSArray *jsonData3  = dict[@"data"];
+        
+        //NSLog(@"jsonData3: %@", jsonData3);
+        
+        //NSArray *jsonData2 = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+        
+        //NSLog(@"jsonData2: %@", jsonData2);
+        
+        NSMutableArray *arrResult = [NSMutableArray array];
+        
+        int i = 0;
+        for (NSDictionary *dict3 in jsonData3) {
+            
+            NSLog(@"Element  %d", i+1);
+            //NSLog(@"data %@", dict1[@"data"]);
+            
+            NSLog(@"user_id %@", dict3[@"user_id"]);
+            NSLog(@"avatar_url %@", dict3[@"avatar_url"]);
+            i++;
+            //NSLog(@"City %@", dict1[@"City"]);
+        
+            //[arrResult addObject:dict3];
+            
+            [self.messages addObject:[[Message alloc] initWithDictionary:dict3]];
+            //[self.chatTable reloadData];
+        }
+        
+        [self.chatTable reloadData];
     });
 }
 

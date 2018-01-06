@@ -38,8 +38,11 @@
 {
     [self.header setText:message.username];
     [self.body setText:message.text];
+    //[message.avatarURL];
     
-    self.imageView.image = [UIImage imageNamed:@"imageURL.png"];
+    //NSURL *url = [message.avatarURL];
+    NSData *data = [NSData dataWithContentsOfURL:message.avatarURL];
+    self.imageView.image = [UIImage imageWithData:data];
 }
 
 
