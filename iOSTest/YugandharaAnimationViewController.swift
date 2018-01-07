@@ -16,7 +16,16 @@ class YugandharaAnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var gangnamNames = ["win_1", "win_2","win_3", "win_4","win_5", "win_6","win_7", "win_8","win_9","win_10", "win_11","win_11","win_12", "win_13","win_14","win_15", "win_16",]
+        var gangnamNames = ["win_1", "win_2","win_3", "win_4","win_5", "win_6","win_7", "win_8","win_9","win_10", "win_11","win_11","win_12", "win_13","win_14","win_15", "win_16"]
+        
+        var  GangnamImages = [UIImage] ()
+
+        for i in 0..<gangnamNames.count {
+            GangnamImages.append(UIImage(named: gangnamNames[i])!)
+        }
+        Gangnam.animationImages = GangnamImages
+        Gangnam.animationDuration = 1.0
+        Gangnam.startAnimating()
         
         
 
