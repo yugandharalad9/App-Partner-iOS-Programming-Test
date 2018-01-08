@@ -143,7 +143,7 @@
                                             completionHandler:
                                   ^(NSData *data, NSURLResponse *response, NSError *error) {
                                       
-                                      NSLog(@"response %@", response);
+                                      NSLog(@"YugandharaResponse %@", response);
                                       NSLog(@"data %@", data);
                                       
                                       
@@ -211,6 +211,7 @@
                                      alertControllerWithTitle:@"LogIn"
                                      message:@"Log In Successful!!"
                                      preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController * alertFailed = [UIAlertController alertControllerWithTitle:@"LogIn" message:@"Log In Unsuccessful" preferredStyle:UIAlertControllerStyleAlert];
         
         //Add Buttons
         
@@ -222,9 +223,6 @@
                                        NSLog(@"Hello Mr OK");
                                        
                                        [self.navigationController popViewControllerAnimated:YES];
-                                       
-                                       
-                                       
                                        
                                        
                                    }];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F3A299A2002B21D00E84AF3 /* tu Jo Mila cover by Yugandhara.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8F3A29992002B21D00E84AF3 /* tu Jo Mila cover by Yugandhara.mp3 */; };
 		8F7DC0FB1FFE4DBD00807A3B /* Move and Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7DC0FA1FFE4DBD00807A3B /* Move and Animation.swift */; };
 		8F7DC1022000342000807A3B /* YugandharaAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7DC1002000342000807A3B /* YugandharaAnimationViewController.swift */; };
 		8F7DC1032000342000807A3B /* YugandharaAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F7DC1012000342000807A3B /* YugandharaAnimationViewController.xib */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F3A29992002B21D00E84AF3 /* tu Jo Mila cover by Yugandhara.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "tu Jo Mila cover by Yugandhara.mp3"; sourceTree = "<group>"; };
 		8F7DC0F91FFE4DBD00807A3B /* iOSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		8F7DC0FA1FFE4DBD00807A3B /* Move and Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Move and Animation.swift"; sourceTree = "<group>"; };
 		8F7DC1002000342000807A3B /* YugandharaAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YugandharaAnimationViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				F21312DD1E0485B50029E33F /* AnimationViewController.h */,
 				F21312DE1E0485B50029E33F /* AnimationViewController.m */,
+				8F3A29992002B21D00E84AF3 /* tu Jo Mila cover by Yugandhara.mp3 */,
 				8F7DC1002000342000807A3B /* YugandharaAnimationViewController.swift */,
 				8F7DC1012000342000807A3B /* YugandharaAnimationViewController.xib */,
 				8F7DC0FA1FFE4DBD00807A3B /* Move and Animation.swift */,
@@ -295,6 +298,7 @@
 				F264BDB71D7F503300275D46 /* MenuViewController.xib in Resources */,
 				F264BDD21D7F641200275D46 /* ChatViewController.xib in Resources */,
 				F21312E11E0485B50029E33F /* AnimationViewController.xib in Resources */,
+				8F3A299A2002B21D00E84AF3 /* tu Jo Mila cover by Yugandhara.mp3 in Resources */,
 				F264BDA91D7F4F0500275D46 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
