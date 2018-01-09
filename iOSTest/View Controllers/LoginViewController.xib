@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,20 +18,25 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-Sh-ZA6" userLabel="UITextField">
-                    <rect key="frame" x="56" y="100" width="161" height="48"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_login" translatesAutoresizingMaskIntoConstraints="NO" id="H8r-rT-pDN">
+                    <rect key="frame" x="0.0" y="348" width="667" height="27"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-Sh-ZA6" userLabel="UsernameUITextField">
+                    <rect key="frame" x="202" y="100" width="263" height="48"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="263" id="esH-v4-Cgk"/>
                         <constraint firstAttribute="height" constant="48" id="fJ1-Tn-1NM"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-sf-pf9">
-                    <rect key="frame" x="56" y="252" width="161" height="48"/>
+                    <rect key="frame" x="253" y="252" width="161" height="48"/>
                     <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="161" id="Ggt-Xb-VcL"/>
                         <constraint firstAttribute="width" constant="161" id="PXO-H1-9ER"/>
                         <constraint firstAttribute="height" constant="48" id="r0r-g7-cPY"/>
                     </constraints>
@@ -44,36 +49,28 @@
                         <action selector="didPressLoginButton:" destination="-1" eventType="touchUpInside" id="QKq-3O-zJm"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Yh-GL-2qX" userLabel="UITextField">
-                    <rect key="frame" x="56" y="164" width="161" height="48"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Yh-GL-2qX" userLabel="PasswordUITextField">
+                    <rect key="frame" x="202" y="164" width="263" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="HTl-9K-Xrg"/>
+                        <constraint firstAttribute="width" constant="263" id="rib-hs-SXk"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_login" translatesAutoresizingMaskIntoConstraints="NO" id="H8r-rT-pDN">
-                    <rect key="frame" x="0.0" y="348" width="273" height="319"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="9Yh-GL-2qX" secondAttribute="trailing" constant="56" id="3E2-Ke-LaL"/>
                 <constraint firstItem="xoa-Sh-ZA6" firstAttribute="centerX" secondItem="dNN-sf-pf9" secondAttribute="centerX" id="CZZ-Lx-Rwf"/>
                 <constraint firstItem="xoa-Sh-ZA6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="EzF-8w-Xsc" userLabel="UITextField.top = top + 112"/>
                 <constraint firstItem="9Yh-GL-2qX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GP0-ee-VhN"/>
-                <constraint firstAttribute="trailing" secondItem="dNN-sf-pf9" secondAttribute="trailing" constant="56" id="Heb-Vb-cJY"/>
-                <constraint firstItem="dNN-sf-pf9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="56" id="LWm-M7-FXI"/>
                 <constraint firstItem="H8r-rT-pDN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MtT-0h-vh7"/>
                 <constraint firstItem="dNN-sf-pf9" firstAttribute="top" secondItem="9Yh-GL-2qX" secondAttribute="bottom" constant="40" id="OOI-9j-NkE" userLabel="Login.top = UITextField.bottom + 40"/>
                 <constraint firstAttribute="trailing" secondItem="H8r-rT-pDN" secondAttribute="trailing" id="Wlz-yz-E2e"/>
                 <constraint firstItem="xoa-Sh-ZA6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zpz-SQ-V3r"/>
                 <constraint firstAttribute="bottom" secondItem="H8r-rT-pDN" secondAttribute="bottom" id="avf-3R-0kN"/>
                 <constraint firstItem="H8r-rT-pDN" firstAttribute="top" secondItem="dNN-sf-pf9" secondAttribute="bottom" constant="48" id="g0Y-Bz-7co" userLabel="Image View.top = Log In.bottom + 48"/>
-                <constraint firstAttribute="trailing" secondItem="xoa-Sh-ZA6" secondAttribute="trailing" constant="56" id="maS-Aa-jDX"/>
                 <constraint firstItem="9Yh-GL-2qX" firstAttribute="top" secondItem="xoa-Sh-ZA6" secondAttribute="bottom" constant="16" id="upW-bT-WOs" userLabel="UITextField.top = UITextField.bottom + 16"/>
-                <constraint firstItem="xoa-Sh-ZA6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="56" id="yTC-O8-ADF"/>
-                <constraint firstItem="9Yh-GL-2qX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="56" id="z82-jD-RJs"/>
             </constraints>
             <point key="canvasLocation" x="380.5" y="467.5"/>
         </view>

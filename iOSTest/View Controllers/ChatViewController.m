@@ -38,6 +38,7 @@
 {
     
     [super viewDidLoad];
+    
     [self configureTable:self.chatTable];
     _client = [[ChatClient alloc]init];
     [_client fetchChatData:^(NSArray<Message *> *messages) {
