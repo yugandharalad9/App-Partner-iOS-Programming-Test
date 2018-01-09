@@ -29,9 +29,32 @@
  *    A valid password is 'qwerty'
  **/
 
-- (void)loginWithUsername:(NSString *)username password:(NSString *)password completion:(void (^)(NSDictionary *))completion
+- (void)loginWithUsername:(NSString *)username passwordEntered:(NSString *)password completion:(void (^)(NSDictionary *, NSString *))completion
 {
 
+    NSString *post = [[NSString alloc] initWithFormat:@"username=%@&password=%@", username, password];
+    
+    NSURL *url = [NSURL URLWithString:@"http://dev3.apppartner.com/AppPartnerDeveloperTest/scripts/login.php"];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:url];
+    [request setHTTPMethod:@"Post"];
+    //[request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/x-www-form-urlencoded"  forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:[post dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSDate *startTime = [NSDate date];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                            completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                      NSString *time = [[NSString alloc] initWithFormat:@"%f", -[startTime timeIntervalSinceNow]*1000];
+                                     
+                                      NSLog(@"Time: %@", time);
+                                      NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+                                        //dict[@"time"] = time;
+                                        completion(dict, time);
+                                }];
+    [task resume];
 }
 
 @end
