@@ -75,9 +75,9 @@
     
     NSString *message = dict[@"message"];
     
-    if([dict[@"message"]  isEqual: @"Success"])
+    if([dict[@"code"]  isEqual: @"Success"])
     {
-        message = [NSString stringWithFormat:@"%@ %@ %@", message, @"\n Time taken: ", time];
+        message = [NSString stringWithFormat:@"%@ %@ %@ %@", message, @"\n Time taken: ", time, @" ms"];
     }
    
     
@@ -95,7 +95,7 @@
                                    actionWithTitle:@"OK"
                                    style:UIAlertActionStyleDefault
                                    handler:^(UIAlertAction * action) {
-                                       if([dict[@"message"]  isEqual: @"Success"])
+                                       if([dict[@"code"]  isEqual: @"Success"])
                                        {
                                            [self.navigationController popViewControllerAnimated:YES];
                                        }
